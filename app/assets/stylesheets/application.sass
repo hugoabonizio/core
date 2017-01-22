@@ -321,3 +321,94 @@ a.category-link
     i
       display: block
       font-size: 64px !important
+
+
+
+$font-size: 18px
+$line-height: 1.4
+$lines-to-show: 2
+
+
+.panel-highlight
+  background-color: #fff
+
+.highlight-title
+  text-align: center
+  text-transform: uppercase
+  font-weight: bolder
+  color: #2c3e50
+
+.highlight-channel
+  height: calc(100vw * .35)
+  background-color: black
+  border: 2px solid white
+  cursor: pointer
+  overflow: hidden
+  border-radius: 5px
+
+  h3
+    font-weight: bolder
+    position: absolute
+    bottom: -5px
+    left: 0px
+    color: white
+    width: 100%
+    text-align: center
+    background: black
+    background: -webkit-linear-gradient(rgba(0,0,0,0), black)
+    background: -o-linear-gradient(rgba(0,0,0,0), black)
+    background: -moz-linear-gradient(rgba(0,0,0,0), black)
+    background: linear-gradient(rgba(0,0,0,0), black)
+    display: block
+    display: -webkit-box
+    height: $font-size*$line-height*$lines-to-show
+    margin: 5px auto
+    text-align: center
+    font-size: $font-size
+    line-height: $line-height
+    -webkit-line-clamp: $lines-to-show
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    text-decoration: none
+
+  .highlight-imagem-fundo
+    background-size: cover
+    background-position: center
+    -webkit-filter: blur(10px)
+    filter: blur(10px)
+    overflow: hidden
+    position: absolute
+    width: 100%
+    height: 100%
+    opacity: 1
+    top: 0px
+    left: 0px
+
+
+  .highlight-imagem
+    background-size: 100% 100%
+    position: absolute
+    width: 90%
+    height: calc(100vw * .2)
+    top: 50%
+    left: 5%
+    transition: all .3s ease
+    transform: translateY(-50%)
+
+  &:hover .highlight-imagem
+    transform: translateY(-51%)
+
+.tab-content-highlight
+  padding-top: 20px
+
+.tabs-highlight li
+  a
+    font-size: 20px
+    color: #666
+
+  &.active a,
+  &:hover a
+    background: none !important
+    color: #2980B9 !important
+

@@ -1,4 +1,74 @@
 <% content_for(:title, t(:channel, count: 2)) %>
+<div class="col-xs-12">
+  <div class="panel panel-default panel-highlight">
+    <div class="panel-body">
+      <h2 class="highlight-title">Destaques</h2>
+
+      <ul class="nav nav-pills nav-justified tabs-highlight" role="tablist">
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-podcast"></i> Rádio</a></li>
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-mobile"></i> Tecnologia</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-newspaper-o"></i> Notícias</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-music"></i> Música</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-music"></i> Música</a></li>
+        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-music"></i> Música</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content tab-content-highlight">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div class="col-xs-12">
+          <a href="#">
+            <div class="col-xs-4 highlight-channel">
+              <div class="highlight-imagem-fundo"  style="background-image:url(http://i1.sndcdn.com/avatars-000051360595-ne2pu3-original.jpg)"></div>
+              <div class="highlight-imagem"  style="background-image:url(http://i1.sndcdn.com/avatars-000051360595-ne2pu3-original.jpg)"></div>
+              <h3>Podmaníacos</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="col-xs-4 highlight-channel">
+              <div class="highlight-imagem-fundo"  style="background-image:url(https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/nc-feed.jpg)"></div>
+              <div class="highlight-imagem"  style="background-image:url(https://jovemnerd.com.br/wp-content/themes/jovemnerd/assets/images/nc-feed.jpg)"></div>
+              <h3>Nerdcast</h3>
+            </div>
+          </a>
+          <a href="#">
+            <div class="col-xs-4 highlight-channel">
+              <div class="highlight-imagem-fundo"  style="background-image:url(http://crazymetalmind.com/wp-content/uploads/2013/04/logo-itunes-crazy-metal-mind-144.jpg)"></div>
+              <div class="highlight-imagem"  style="background-image:url(http://crazymetalmind.com/wp-content/uploads/2013/04/logo-itunes-crazy-metal-mind-144.jpg)"></div>
+              <h3>Crazy Metal Mind</h3>
+            </div>
+          </a>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+          <br>
+          <div class="col-xs-12">
+          <% @channels.shuffle.each do |channel| %>
+            <%= render partial: "channels/item/list_item", locals: { channel: channel } %>
+          <% end %>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="messages">
+          <br>
+          <div class="col-xs-12">
+          <% @channels.shuffle.each do |channel| %>
+            <%= render partial: "channels/item/list_item", locals: { channel: channel } %>
+          <% end %>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="settings">
+          <br>
+          <div class="col-xs-12">
+          <% @channels.shuffle.each do |channel| %>
+            <%= render partial: "channels/item/list_item", locals: { channel: channel } %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="col-xs-12">
   <div class="panel panel-default">
@@ -17,4 +87,3 @@
     </div>
   </div>
 </div>
-
