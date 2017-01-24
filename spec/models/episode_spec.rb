@@ -3,6 +3,25 @@ require "rails_helper"
 RSpec.describe Episode, type: :model do
   let(:channel) { Fabricate(:channel) }
 
+  describe "listed" do
+    context "when the channel is listed" do
+      let!(:channel) { Fabricate(:channel_with_episodes, listed: true) }
+
+      it "returns the episodes of that channel" do
+        byebug
+        expect(Episode.listed.to_a).to eq(channel.episodes.to_a)
+      end
+    end
+
+    context "when the channel is not listed" do
+      let!(:channel) { Fabricate(:channel_with_episodes, listed: false) }
+
+      it "does not return the episodes of that channel" do
+        expect(Episode.listed.to_a).to eq([])
+      end
+    end
+  end
+
   describe "not analised" do
     let!(:episodes) do
       [

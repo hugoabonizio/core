@@ -21,6 +21,7 @@ class Episode
 
   index({ published_at: 1, channel_id: 1 }, unique: true)
 
+  scope :listed, -> { includes(:channel).where("channel.listed" => true) }
   scope :not_analysed, -> { where(:"audio.status".ne => "analysed") }
 
   def next

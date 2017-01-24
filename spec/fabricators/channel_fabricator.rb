@@ -28,7 +28,7 @@ Fabricator(:channel_with_an_empty_feed, from: :channel) do
 end
 
 Fabricator(:channel_with_episodes, from: :channel) do
-  episodes(rand: 3) do |_attrs, i|
-    Fabricate(:episode, published_at: i.days.ago )
+  episodes(rand: 3) do |channel, i|
+    Fabricate(:episode, channel: channel, published_at: i.days.ago)
   end
 end
