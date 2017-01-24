@@ -339,7 +339,7 @@ $lines-to-show: 2
   color: #2c3e50
 
 .highlight-channel
-  height: calc(100vw * .35)
+  height: calc(100vw * .25)
   background-color: black
   border: 2px solid white
   cursor: pointer
@@ -389,10 +389,10 @@ $lines-to-show: 2
   .highlight-imagem
     background-size: 100% 100%
     position: absolute
-    width: 90%
-    height: calc(100vw * .2)
+    width: 70%
+    height: 200px
     top: 50%
-    left: 5%
+    left: 15%
     transition: all .3s ease
     transform: translateY(-50%)
 
@@ -411,4 +411,57 @@ $lines-to-show: 2
   &:hover a
     background: none !important
     color: #2980B9 !important
+.statistics-wrapper
+  padding: 0px
+.statistics
+  .panel
+    min-height: 200px
+  h1, h4
+    text-align: center
+    color: #808b96
+  h1
+    font-size: 80px
+    font-weight: bolder
 
+@media (max-width: 768px)
+  .highlight-channel
+    height: calc(100vw * .5)
+
+  .highlight-imagem
+    height: calc(100vw * .4) !important
+
+
+
+
+
+
+
+
+
+
+.category-list
+  overflow-x: hidden
+  height: 190px
+  overflow-y: hidden
+  width: calc(100% - 100px)
+.category-wrapper
+  height: 148px
+  width: auto
+  display: flex
+  padding-left: 10px
+.channel-category-list
+  width: 150px
+  display: inline-block
+  margin-left: 10px
+.btn-category-list, .category-list
+  display: inline-block
+  float: left
+.category-list-title
+  margin-left: 40px
+  color: #2980b9
+.btn-category-list
+  width: 40px
+  height: 162px
+  margin: 0px 5px
+  background: white
+  border: 0px
