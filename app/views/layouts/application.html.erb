@@ -8,8 +8,7 @@
     <%= render partial: "layouts/meta" %>
     <%= favicon_link_tag("logo.png") %>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "application", media: "all" %>
   </head>
 
   <body>
@@ -21,4 +20,5 @@
   </body>
 
   <%= render partial: "layouts/google_analytics" %>
+  <%= javascript_include_tag "application" %>
 </html>
