@@ -21,9 +21,16 @@ Rails.application.configure do
       'Cache-Control' => 'public, max-age=172800'
     }
   else
-    config.action_controller.perform_caching = false
+    puts "FOOOOO"
+    uri = URI.parse(ENV.fetch("REDIS_URL", "redis://127.0.0.1:6379"))
 
-    config.cache_store = :null_store
+    config.cache_store = :redis_store, {
+      host: uri.host,
+      port: uri.port,
+      password: uri.password,
+      username: uri.user,
+      namespace: "cache",
+    }
   end
 
   # Don't care if the mailer can't send.

@@ -9,6 +9,10 @@ gem "puma", "~> 3.0"
 # Operations
 gem "functional_operations"
 
+# Cache
+gem "redis"
+gem "redis-rails"
+
 # Database
 gem "mongoid", "~> 6.0.0"
 gem "mongoid-uuid", git: "https://github.com/marceloboeira/mongoid-uuid"
@@ -46,7 +50,6 @@ gem "house.rb", ">= 0.1.1"
 gem "streamio-ffmpeg"
 
 # AB Testing
-gem "redis"
 gem "split"
 
 # Sanitize
